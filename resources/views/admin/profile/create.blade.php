@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>create</title>
-    </head>
-    <body>
-        <h1>これは課題４のcreate.blade.phpです。</h1>
-    </body>
-</html>
+{{-- PHP/Laravel 11課題４resources/views/layouts/profile.blade.phpを読み込み --}}
+@extends('layouts.profile')
+
+{{-- layouts/profile.blade.phpの@yield('title')に'My プロフィール'を埋め込む --}}
+@section('title','自分のプロフィール')
+
+{{-- layouts/profile.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-mr-8 mx-auto">
+                <h1>My プロフィール</h1>
+            </div>
+        </div>
+    </div>
+@endsection

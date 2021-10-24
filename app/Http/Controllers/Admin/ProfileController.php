@@ -31,13 +31,33 @@ public function create(Request $request)
     return redirect('admin/profile/create');
 }
 
-public function edit()
+public function index(Request $request)
 {
-    return view('admin.profile.edit');
+    $cond_name = $request->cond_name;
+    if ($cond_name != '') {
+        $posts = Profile::where('name', $cond_name)->get();
+} else {
+    $posts = Profile::all();
+}
+return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
 }
 
-public function update()
+public function edit(Request $request)
 {
-    return redirect('admin/profile/edit');
+    $profile = Profile::find($request->id);
+    
+    return view('admin.profile.edit', ['profile_form' => $profile]);
+}
+
+public function update(Request $request)
+{
+    $this->validate($request, Profile::$rules);
+    $profile = Profile::find($request->id);
+    $profile_form = $request->all();
+    unset($profile_form['_token']);
+    
+    $profile->fill($profile_form)->save();
+    
+    return redirect('admin/profile/');
 }
 }

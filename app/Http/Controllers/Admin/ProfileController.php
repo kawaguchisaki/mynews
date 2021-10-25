@@ -45,7 +45,9 @@ return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name
 public function edit(Request $request)
 {
     $profile = Profile::find($request->id);
-    
+    if (empty($profile)) {
+        abort(404);
+    }
     return view('admin.profile.edit', ['profile_form' => $profile]);
 }
 
@@ -60,4 +62,12 @@ public function update(Request $request)
     
     return redirect('admin/profile/');
 }
+
+public function delete(Request $request)
+{
+    $profile = Profile::find($request->id);
+    $profile->delete();
+    return redirect('admin/profile/');
+}
+
 }

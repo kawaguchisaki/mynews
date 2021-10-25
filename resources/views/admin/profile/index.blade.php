@@ -45,10 +45,13 @@
                                 <td>{{ \Str::limit($profile->name,20) }}</td>
                                 <td>{{ \Str::limit($profile->gender,6) }}</td>
                                 <td>{{ \Str::limit($profile->hobby,100) }}</td>
-                                <td>{{ \Str::limit($profile->introduce,200) }}</td>
+                                <td>{{ \Str::limit($profile->introduction,200) }}</td>
                                 <td>
                                     <div>
                                         <a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}">編集</a>
+                                    </div>
+                                    <div>
+                                        <a href="{{ action('Admin\ProfileController@delete', ['id' =>$profile->id]) }}">削除</a>
                                     </div>
                                 </td>
                             </tr>

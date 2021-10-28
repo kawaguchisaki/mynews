@@ -24,9 +24,9 @@ class NewsController extends Controller
         $form = $request->all();
         
         if (isset($form['image'])){
-            $path = $request->file('image')->store('public/image');
-            $news->image_path = basename($path);
-        }else{
+          $path = $request->file('image')->store('public/image');
+          $news->image_path = basename($path);
+        } else {
             $news->image_path = null;
         }
         

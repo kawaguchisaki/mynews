@@ -36,3 +36,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*課題
 Route::get('XXX','AAAController@bbb');
 */
+Route::get('/','NewsController@index');

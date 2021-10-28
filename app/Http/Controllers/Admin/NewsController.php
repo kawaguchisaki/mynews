@@ -43,6 +43,7 @@ class NewsController extends Controller
     {
         $cond_title = $request->cond_title;
         if ($cond_title != ''){
+            $posts = News::where('title',$cond_title)->get();
         } else {
             $posts = News::all();
         }

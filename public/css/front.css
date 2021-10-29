@@ -30,10 +30,6 @@ body {
 }
 
 .headline .caption .name {
-  width: 100%;
-  position: absolute;
-  bottom: -50px;
-  left: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -42,7 +38,10 @@ body {
   font-size: 1.2em;
 }
 
-.headline .caption .body,
+.headline .caption .body {
+  font-size: 0.8em;
+}
+
 .headline .caption .gender,
 .headline .caption .hobby,
 .headline .caption .introduction {
@@ -55,13 +54,13 @@ body {
 }
 
 .posts .post .title,
-.posts .post .name,
-.posts .post .gender {
+.posts .post .name {
   font-size: 1.2em;
   font-weigth: bold;
 }
 
 .posts .post .body,
+.posts .post .gender,
 .posts .post .hobby,
 .posts .post .introduction {
   font-size: 0.8em;

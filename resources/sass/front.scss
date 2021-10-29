@@ -37,8 +37,12 @@ body {
     font-size: 1.2em;
       }
     }
-    .body, .gender, .hobby, .introduction {
+    .body {
       font-size: 0.8em;
+    }
+    .gender, .hobby, .introduction {
+      font-size: 0.8em;
+      
     }
   }
 }

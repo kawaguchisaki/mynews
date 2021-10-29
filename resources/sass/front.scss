@@ -29,7 +29,15 @@ body {
     font-size: 1.2em;
       }
     }
-    .body {
+    .name {
+     
+      background-color: rgba(0, 0, 0, 0.6);
+      h1 {
+    color: #fff;
+    font-size: 1.2em;
+      }
+    }
+    .body, .gender, .hobby, .introduction {
       font-size: 0.8em;
     }
   }
@@ -41,11 +49,11 @@ body {
       font-size: 0.6em;
       color: #999999;
     }
-    .title {
+    .title, .name, {
       font-size: 1.2em;
       font-weigth: bold;
     }
-    .body {
+    .body, .gender, .hobby, .introduction {
       font-size: 0.8em;
     }
     .image {

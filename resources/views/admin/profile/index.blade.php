@@ -36,6 +36,7 @@
                                 <th width="10%">性別</th>
                                 <th width="20%">趣味</th>
                                 <th width="30%">自己紹介</th>
+                                <th width="10%">操作</th>
                             </tr>
                         </thead>
                         <tbody>

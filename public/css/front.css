@@ -4,7 +4,7 @@ body {
 
 .header .logo {
   width: 120px;
-  height: 83px;
+  height: 82px;
 }
 
 .headline .caption {
@@ -29,7 +29,23 @@ body {
   font-size: 1.2em;
 }
 
-.headline .caption .body {
+.headline .caption .name {
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.headline .caption .name h1 {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.headline .caption .body,
+.headline .caption .gender,
+.headline .caption .hobby,
+.headline .caption .introduction {
   font-size: 0.8em;
 }
 
@@ -38,12 +54,16 @@ body {
   color: #999999;
 }
 
-.posts .post .title {
+.posts .post .title,
+.posts .post .name,
+.posts .post .gender {
   font-size: 1.2em;
   font-weigth: bold;
 }
 
-.posts .post .body {
+.posts .post .body,
+.posts .post .hobby,
+.posts .post .introduction {
   font-size: 0.8em;
 }
 

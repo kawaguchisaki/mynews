@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\News;
 use App\History;
+use App\Post;
 use Carbon\Carbon;
 use Storage;
 
@@ -14,6 +15,10 @@ class NewsController extends Controller
     //
     public function add()
     {
+        $post = new Post();
+        $post->access = "アクセスしました。";
+        $post->save();
+        
         return view('admin.news.create');
     }
     public function create(Request $request)

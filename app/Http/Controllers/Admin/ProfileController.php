@@ -11,7 +11,7 @@ use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
-    //課題５
+    
 public function add()
 {
     return view('admin.profile.create');
@@ -38,10 +38,10 @@ public function index(Request $request)
     $cond_name = $request->cond_name;
     if ($cond_name != '') {
         $posts = Profile::where('name', $cond_name)->get();
-} else {
-    $posts = Profile::all();
-}
-return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+    } else {
+        $posts = Profile::all();
+    }
+    return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
 }
 
 public function edit(Request $request)
